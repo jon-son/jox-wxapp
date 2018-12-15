@@ -1,0 +1,15 @@
+{
+  "name": "jox-wxapp",
+  "version": "1.0.0",
+  "author": "jonson",
+  "license": "MIT",
+  "miniprogram": "dist",
+  "description": "jox微信小程序组件，持续更新中",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:jon-son/jox-wxapp.git"
+  }
+}
