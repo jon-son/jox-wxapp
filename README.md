@@ -6,7 +6,7 @@ jox微信小程序组件，持续更新中
 
     npm install jox-wxapp --save
 
-### 将本项目的dist复制进你的项目文件夹根目录，目前本组件库只有discolour-img一个组件
+### or git下载并将本项目的dist复制进你的项目文件夹根目录，目前本组件库只有discolour-img一个组件
 ## 2、项目引入组件
 在小程序`xxx.json`文件中加入以下代码   
   
