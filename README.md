@@ -4,7 +4,7 @@ jox微信小程序组件，持续更新中
 ## 1、下载安装
 ### 使用npm下载(推荐)
 
-    npm install -g jox-wxapp
+    npm install jox-wxapp --save
 
 ### 将本项目的dist复制进你的项目文件夹根目录，目前本组件库只有discolour-img一个组件
 ## 2、项目引入组件
