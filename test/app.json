@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
-    "components/discolour-img/index"
+    "pages/chat/index",
+    "pages/discolour-img/index",
+    "components/discolour-img/index",
+    "components/chat/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
