@@ -16,14 +16,16 @@ jox微信小程序组件，持续更新中
 ## 3、使用组件
 在小程序`xxx.wxml`文件中使用，代码示例如下：
 ```html
-<jox-discolour joxId="joxCanvas" src="/test.png" rgba="(100,100,100,100)" width="100" height="100"></jox-discolour>
+<jox-discolour debug="true" joxId="joxCanvas" src="/test2.png" rgb="(100,100,100)" width="100" height="100"></jox-discolour>
 ```
 ## 4、组件属性说明
     joxId：给组件定义canvas-id的值，可不填  
     
+    debug:微信开发者工具上显示不了修改后的图片，如果在开发者工具上调试请给该属性赋true值，默认为false
+    
     src：png本地图片资源，不可为网络图片资源 
     
-    rgba：png要转换颜色的rgba(Red、Green、Blue、和Alpha的色彩空间)值 
+    rgb：png要转换颜色的rgb(Red、Green、Blue)值 
     
     width：转换颜色后的图片宽度，单位为rpx 
     
