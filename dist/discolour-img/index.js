@@ -39,39 +39,47 @@ Component({
     // 这里是一个自定义方法
     setRGBA() { 
       let that = this
-      let windowWidth = wx.getSystemInfoSync().windowWidth
-      let widthPx = (windowWidth/750) * parseInt(that.properties.width)
-      let heightPx = (windowWidth/750) * parseInt(that.properties.height)
+      wx.getImageInfo({
+        src: that.properties.src,
+        success: res => {
+          that.setData({
+            imgWidth: res.width,
+            imgHeight: res.height
+          })
+        }
+      })
+
       let rgb = that.properties.rgb
       rgb = rgb.substring(1, rgb.length - 1).split(",")
       let ctx = wx.createCanvasContext(that.properties.joxId, that) //自定义组件需要在后边加this参数
-      ctx.drawImage(that.properties.src, 0, 0, widthPx*2, heightPx*2)
-      ctx.draw(true, function (){
+      ctx.drawImage(that.properties.src, 0, 0, that.data.imgWidth, that.data.imgHeight)
+      ctx.draw(false, function (){
         wx.canvasGetImageData(
           {   
             canvasId: that.properties.joxId,
-            width: widthPx*2,
-            height: heightPx*2,
+            width: that.data.imgWidth,
+            height: that.data.imgHeight,
             success(res) {
-              let data = res.data
-              for (let i = 0; i < widthPx * widthPx * 16; i += 4){
+              let data1 = res.data
+              for (let i = 0; i < that.data.imgWidth * that.data.imgHeight * 4; i += 4){
                 if (res.data[i] != 0 || res.data[i + 1] != 0 || res.data[i + 2] != 0 || res.data[i+3] != 0){
-                  data[i] = rgb[0]
-                  data[i + 1] = rgb[1]
-                  data[i + 2] = rgb[2]
+                  data1[i] = rgb[0]
+                  data1[i + 1] = rgb[1]
+                  data1[i + 2] = rgb[2]
                 } 
               }
+              let data = new Uint8ClampedArray(data1)
               wx.canvasPutImageData({
                 canvasId: that.properties.joxId,
-                width: widthPx*2,
-                height: heightPx*2,
+                width: that.data.imgWidth,
+                height: that.data.imgHeight,
                 data,
                 success(res) {
                   wx.canvasToTempFilePath({
                     x: 0,
                     y: 0,
-                    width: widthPx*2,
-                    height: heightPx*2,
+                    width: that.data.imgWidth,
+                    height: that.data.imgWidth,
                     canvasId: that.properties.joxId,
                     success(res) {
                       console.log(res)
@@ -93,15 +101,13 @@ Component({
   },
 
   ready(){
-    if (this.properties.debug == "true"){
-      this.setData({
-        url: this.properties.src
-      })
-    } else if (this.properties.debug == "false"){
-      this.setData({
-        url: ""
+    let that =this
+    if (that.properties.debug == "true") {
+      that.setData({
+        url: that.properties.src
       })
     }
-    this.setRGBA()
+    that.setRGBA()
+    
   }
 })
