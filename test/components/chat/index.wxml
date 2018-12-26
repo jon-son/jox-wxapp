@@ -1,6 +1,6 @@
 <!--components/chat/index.wxml-->
 
-<scroll-view scroll-y="true" scroll-into-view="{{downId}}" style='height:{{scrollHeight}}rpx' id='j_page'>
+<scroll-view scroll-y="true" scroll-into-view="{{downId}}" style='height:{{scrollHeight}}rpx' id='j_page' >
   <view wx:if="{{isEmpty}}">
     <view wx:for="{{messageLists}}"  wx:key="index" >
       <view class='time' style='height:{{!item.showTime?"0":"80"}}rpx'>
