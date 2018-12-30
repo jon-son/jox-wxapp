@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
-    "components/discolour-img/index"
+    "pages/discolour-img/index",
+    "page/tar/tar"
   ],
   "window": {
     "backgroundTextStyle": "light",

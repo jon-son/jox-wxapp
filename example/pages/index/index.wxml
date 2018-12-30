@@ -1,3 +1,0 @@
-<!--index.wxml-->
-
-<jox-discolour debug="true" joxId="3" src="/test2.png" rgb="(255,255,255)" width="400" height="400"></jox-discolour>

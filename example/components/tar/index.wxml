@@ -1,0 +1,9 @@
+<!--components/tar/index.wxml-->
+<view class='tar'>
+  <view class='tar-item' wx:for="{{tarList}}" wx:key="index" data-id='{{index}}' bindtap='change_tar'>
+    <view class='tar-item-text' 
+    style='border-bottom: {{sele == index?"4rpx solid "+hightlight:"none"}} '>
+     <text style='color:{{sele == index?hightlight:color}}'>{{item}}</text>
+    </view>
+  </view>
+</view>
