@@ -1,0 +1,2 @@
+<!--pages/progress/index.wxml-->
+<jox-progress size="408" colorBg='rgba(255,255,255,0.61)' language="1" long="12" start="0" end="150" speed="1"></jox-progress>

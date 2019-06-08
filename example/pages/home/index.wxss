@@ -1,0 +1,4 @@
+/* pages/home/index.wxss */
+.show-item{
+  padding: 10rpx;
+}

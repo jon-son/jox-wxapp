@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "jox-progress": "/components/progress/index"
+  }
+}

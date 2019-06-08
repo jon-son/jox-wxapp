@@ -1,0 +1,4 @@
+/* pages/progress/index.wxss */
+page{
+  background-color: black;
+}

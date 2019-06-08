@@ -1,0 +1,11 @@
+<!--components/progress/index.wxml-->
+<!-- 绘制圆环背景 -->
+<canvas canvas-id="canvasProgressbg" style='position: absolute;width:{{size+50}}rpx;height:{{size+50}}rpx'>
+  <view class='progress-center'>
+    <image src='/img/logo.png' class='logo'></image>
+    <text class='pm' style="color:{{color}}" >{{end}}</text>
+    <text class='pm2' style="color:{{color}}">PM2.5 {{language==0?status1[index]:status2[index]}}</text>
+  </view>
+</canvas>
+<!-- 绘制加载中圆弧 -->
+<canvas canvas-id="canvasProgress" style='width:{{size+50}}rpx;height:{{size+50}}rpx;' class="canvasProgress" />

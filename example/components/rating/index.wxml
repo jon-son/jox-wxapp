@@ -1,0 +1,6 @@
+<!--components/rating/index.wxml-->
+<view class='jox-class'>
+  <block class='starts' wx:for="{{5}}" wx:key="index">
+    <text class='icon-favorfill start{{index>=rating/2?"no":""}}'></text>
+  </block>
+</view>

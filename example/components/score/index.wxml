@@ -1,0 +1,13 @@
+<!--components/parts/score/index.wxml-->
+<view class='jox-class'>
+  <view class='score'>
+    <view class='score-text'>
+      <text class='score-value'>{{strength}}</text>
+      <text class='score-name'>实力值</text>
+    </view>
+    <view class='score-text'>
+      <text class='score-value'>{{charm}}</text>
+      <text class='score-name'>魅力值</text>
+    </view>
+  </view>
+</view>

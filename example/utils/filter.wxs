@@ -1,0 +1,82 @@
+
+
+var filter = {
+  distance: function (la1, lo1, la2, lo2) {
+    if (la1==null || lo1 == null){
+      return "未设置"
+    }
+    var La1 = la1 * Math.PI / 180.0;
+    var La2 = la2 * Math.PI / 180.0;
+    var La3 = La1 - La2;
+    var Lb3 = lo1 * Math.PI / 180.0 - lo2 * Math.PI / 180.0;
+    var s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(La3 / 2), 2) + Math.cos(La1) * Math.cos(La2) * Math.pow(Math.sin(Lb3 / 2), 2)));
+    s = s * 6378.137;
+    s = Math.round(s * 10000) / 10000;
+    var res = ""
+    if (s < 1) {
+      res = (s * 1000).toFixed(2) == 0 ? "0m" : (s * 1000).toFixed(2)+"m"
+    }
+    else if (s < 999) {
+      res = s.toFixed(2) + "km"
+    } else if (s > 999){
+      res = ">999km"
+    }
+    return res
+  },
+  birthday: function (birthday,type){
+    if (birthday == null || birthday=="0000-00-00 00:00:00"){
+      return "未设置"
+    }else{
+      birthday = getDate(birthday).toLocaleDateString()
+      nowday = getDate().toLocaleDateString()
+      if (type == "age") {
+        var returnAge;
+        birthYear = birthday.split('/')[0]
+        birthMonth = birthday.split('/')[1]
+        birthDay = birthday.split('/')[2]
+
+        nowYear = nowday.split('/')[0]
+        nowMonth = nowday.split('/')[1]
+        nowDay = nowday.split('/')[2]
+
+        if (nowYear == birthYear) {
+          returnAge = 0;//同年 则为0岁
+        }
+        else {
+          var ageDiff = nowYear - birthYear; //年之差
+          if (ageDiff > 0) {
+            if (nowMonth == birthMonth) {
+              var dayDiff = nowDay - birthDay;//日之差
+              if (dayDiff < 0) {
+                returnAge = ageDiff - 1;
+              }
+              else {
+                returnAge = ageDiff;
+              }
+            }
+            else {
+              var monthDiff = nowMonth - birthMonth;//月之差
+              if (monthDiff < 0) {
+                returnAge = ageDiff - 1;
+              }
+              else {
+                returnAge = ageDiff;
+              }
+            }
+          }
+          else {
+            returnAge = -1;//返回-1 表示出生日期输入错误 晚于今天
+          }
+        }
+
+        return returnAge;//返回周岁年龄
+      }
+    }
+
+  }
+}
+
+module.exports = {
+  distance: filter.distance,
+  birthday: filter.birthday
+}

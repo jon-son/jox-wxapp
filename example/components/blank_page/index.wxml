@@ -1,0 +1,7 @@
+<!--components/parts/blank_page/index.wxml-->
+<view>
+  <view class='nodata' wx:if="{{message_lists.length == 0}}">
+    <image class='nodata-img' src='/img/nodata.png'></image>
+  </view>
+</view>
+

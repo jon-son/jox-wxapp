@@ -1,3 +1,16 @@
 <!--index.wxml-->
-
-<jox-discolour debug="true" joxId="3" src="/test2.png" rgb="(255,255,255)" width="400" height="400"></jox-discolour>
+<view>png纯色图片换色</view>
+<view>使用方法：</view>
+<view>json文件引用</view>
+<view>"jox-discolour": "/components/discolour-img/index"</view>
+<view>wxml文件引用</view>
+<view>{{"<jox-discolour></jox-discolour>"}}</view>
+<view>属性介绍</view>
+<view>debug="true"</view>
+<view>src="/test2.png"</view>
+<view>joxId="3"</view>
+<view>width="200"</view>
+<view>height="200"</view>
+<view>rgb="(255,255,255)"</view>
+<view>效果展示</view>
+<jox-discolour debug="false" joxId="3" src="/test2.png" rgb="(255,255,255)" width="200" height="200"></jox-discolour>

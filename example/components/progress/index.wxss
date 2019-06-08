@@ -1,0 +1,32 @@
+/* components/progress/index.wxss */
+.canvasProgress{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.progress-center {
+  margin-top: 90rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 128rpx;
+  height: 62rpx;
+  opacity: 0.61;
+}
+
+.pm {
+  font-size: 147rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  line-height: 147rpx;
+}
+
+.pm2 {
+  font-size: 30rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  line-height: 70rpx;
+}

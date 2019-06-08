@@ -1,5 +1,6 @@
 // components/tar/index.js
 Component({
+  externalClasses: ['jox-class'],
   options: {
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
   },
@@ -25,6 +26,14 @@ Component({
       type : String,
       value: "#409CFF"
     },
+    fixed:{
+      type:Boolean,
+      value:false
+    },
+    type:{
+      type:String,
+      value:"normal"
+    }
   },
 
   /**
@@ -32,14 +41,8 @@ Component({
    * 可用于模版渲染
    */
   data: {
-    sele : ""
   },
-  ready: function(){
-    let that = this
-    that.setData({
-      sele: this.properties.selected
-    })
-  },
+
 
   methods: {
     /*
@@ -49,7 +52,7 @@ Component({
       let that = this
       let dataset = env.currentTarget.dataset
       that.setData({
-        sele: dataset.id
+        selected: dataset.id
       })
       this.triggerEvent('joxtarselected', dataset.id)
     }

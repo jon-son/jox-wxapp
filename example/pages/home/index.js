@@ -1,18 +1,11 @@
-// pages/test/test.js
+// pages/home/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tar: [
-      "NihOn",
-      "好评",
-      "距离"
-    ]
-  },
-  joxTarTap:function(e){
-    console.log(e.detail)
+
   },
 
   /**
@@ -21,7 +14,11 @@ Page({
   onLoad: function (options) {
 
   },
-
+  jump_to(event){
+    console.log(event)
+    let url = event.currentTarget.dataset.url
+    wx.navigateTo({url: '/pages/'+url+"/index"})
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
