@@ -8,3 +8,4 @@ jox微信小程序组件，持续更新中
 
 ### or git下载并将本项目的dist复制进你的项目文件夹根目录
 ## 二、demo展示
+![Image text](https://github.com/jon-son/jox-wxapp/blob/master/temp-img/gh_f1e3494a78be_258.jpg)
