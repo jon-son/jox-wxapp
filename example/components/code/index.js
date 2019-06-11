@@ -17,7 +17,7 @@ Component({
     },
     fontSize:{
       type:Number,
-      value:20
+      value:24
     }
   },
 

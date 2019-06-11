@@ -5,7 +5,7 @@ Component({
   properties: {
     rating: {
       type: Number, // 必需 指定属性类型 [String, Number, Boolean, Object, Array, null(任意类型)]
-      value: 10
+      value: 5
     },
     disabled: {
       type: Boolean,
@@ -20,9 +20,9 @@ Component({
       if (this.properties.disabled) {
         return;
       }
-      const max = 10;
+      const max = 5;
       const num = event.currentTarget.dataset.num;
-      const rating = num* 2
+      const rating = num
       this.setData({
         rating: rating
       })

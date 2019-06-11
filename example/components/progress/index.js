@@ -50,7 +50,7 @@ Component({
   observers: {
     'end': function(end) {
       this.setData({
-        count: this.properties.start 
+        count: this.properties.start
       })
       clearInterval(this.data.countTimer)
       this.startProgress(this.properties.start, this.properties.end);
@@ -135,23 +135,20 @@ Component({
       let device = this.device()
       let system = device.system
       let width = device.width
-      console.log(size)
-
- 
-        translates.push([(size / 229) * 110.5, (size / 229) * 227])
-        translates.push([(size / 229) * 41, (size / 229) * 188])
-        translates.push([(size / 229) * 11, (size / 229) * 104.5])
-        translates.push([(size / 229) * 56, (size / 229) *  28])
-        translates.push([(size / 229) * 146.5, (size / 229) * 16])
-        translates.push([(size / 229) * 212, (size / 229) * 78.5])
-        translates.push([(size / 229) * 203, (size / 229) * 170])
-        rotates.push(0 * Math.PI / 180)
-        rotates.push(230 * Math.PI / 180)
-        rotates.push(282 * Math.PI / 180)
-        rotates.push(332 * Math.PI / 180)
-        rotates.push(22 * Math.PI / 180)
-        rotates.push(78 * Math.PI / 180)
-        rotates.push(129 * Math.PI / 180)
+      translates.push([(size / 229) * 110.5, (size / 229) * 227])
+      translates.push([(size / 229) * 41, (size / 229) * 188])
+      translates.push([(size / 229) * 11, (size / 229) * 104.5])
+      translates.push([(size / 229) * 56, (size / 229) * 28])
+      translates.push([(size / 229) * 146.5, (size / 229) * 16])
+      translates.push([(size / 229) * 212, (size / 229) * 78.5])
+      translates.push([(size / 229) * 203, (size / 229) * 170])
+      rotates.push(0 * Math.PI / 180)
+      rotates.push(230 * Math.PI / 180)
+      rotates.push(282 * Math.PI / 180)
+      rotates.push(332 * Math.PI / 180)
+      rotates.push(22 * Math.PI / 180)
+      rotates.push(78 * Math.PI / 180)
+      rotates.push(129 * Math.PI / 180)
       texts.push('0')
       texts.push('50')
       texts.push('100')
@@ -180,19 +177,16 @@ Component({
     /**
      * 画progress进度
      */
-    drawCircle: function(step) {
-
+    drawCircle(step) {
       // 使用 wx.createContext 获取绘图上下文 context
       var context = wx.createCanvasContext('canvasProgress', this);
       let color = this.pmtocolor(step)[0]
-
       var start = 0.5 * Math.PI;
       var point = {
         x: this.rpxtopx(this.properties.size / 2 + 25),
         y: this.rpxtopx(this.properties.size / 2 + 25)
       };
       let end = 0;
-
       var radius = this.rpxtopx(this.properties.size / 2 - this.properties.long);
       for (var i = 1; i < step + 1; i++) {
         context.beginPath();
@@ -211,26 +205,20 @@ Component({
         context.restore();
         start = end;
       }
-
       context.draw();
-
-
-
     },
     /**
      * 开始progress
      */
     startProgress(start, end) {
-
       let count = this.data.count
       if (start < end) {
         this.setData({
           index: this.pmtocolor(end)[1],
           color: this.pmtocolor(end)[0],
           countTimer: setInterval(res => {
-            if (count <  end) {
+            if (count < end) {
               this.drawCircle(count)
-
               if (end - count > 10) {
                 count = count + 10;
               } else {
@@ -251,12 +239,10 @@ Component({
               } else {
                 count = count - 1;
               }
-              
             }
           }, 10)
         })
       }
-
     }
 
   }

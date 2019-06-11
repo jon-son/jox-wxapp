@@ -1,6 +1,6 @@
 {
   "name": "jox-wxapp",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "author": "jonson",
   "license": "MIT",
   "miniprogram": "dist",
@@ -10,6 +10,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:jon-son/jox-wxapp.git"
+    "url": "git+ssh://git@github.com/jon-son/jox-wxapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jon-son/jox-wxapp/issues"
+  },
+  "homepage": "https://github.com/jon-son/jox-wxapp#readme",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "更新组件"
   }
 }

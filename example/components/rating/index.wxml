@@ -1,6 +1,6 @@
 <!--components/rating/index.wxml-->
 <view class='jox-class'>
   <block class='starts' wx:for="{{5}}" wx:key="index">
-    <text data-num='{{index+1}}' bindtap='changeRating' class='icon-favorfill start{{index>=rating/2?"no":""}}' ></text>
+    <text data-num='{{index+1}}' bindtap='changeRating' class='icon-favorfill start{{index>=rating?"no":""}}' ></text>
   </block>
 </view>
