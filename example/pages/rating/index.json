@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "jox-rating": "/components/rating/index",
+    "jox-code": "/components/code/index",
+    "jox-table": "/components/table/index"
+  },
+  "navigationBarTitleText": "评分"
+}

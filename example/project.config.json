@@ -12,8 +12,8 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.3",
-	"appid": "wx7c713d95352ccb2e",
+	"libVersion": "2.7.1",
+	"appid": "wxddff35e6c6705918",
 	"projectname": "test",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -30,13 +30,45 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "discolour",
+					"pathName": "pages/discolour-img/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "fixed",
+					"pathName": "pages/tar/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "score",
+					"pathName": "pages/score/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "rating",
+					"pathName": "pages/rating/index",
+					"scene": null
+				}
+			]
 		}
 	}
 }

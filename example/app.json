@@ -1,6 +1,11 @@
 {
   "pages": [
-    "pages/home/index"
+    "pages/home/index",
+    "pages/discolour-img/index",
+    "pages/progress/index",
+    "pages/tar/index",
+    "pages/score/index",
+    "pages/rating/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

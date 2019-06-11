@@ -1,7 +1,6 @@
 <!--components/discolour-img/index.wxml-->
-<canvas hidden='true' canvas-id="{{joxId}}" style='width:{{width*2}}rpx;height:{{height*2}}rpx'></canvas>
-<view style='width:{{width}}rpx;height:{{height}}rpx'>
-
-<image src='{{url}}' style='width:100%;height:100%'></image>
+<view style='width:{{width}}rpx;height:{{height}}rpx;'>
+  <canvas id="{{joxId}}" canvas-id="{{joxId}}" style='width:{{width}}rpx;height:{{height}}rpx'>
+    <cover-view style='width:{{width}}rpx;height:{{height}}rpx;display: {{hidden?"none":"block"}};'></cover-view>
+  </canvas>
 </view>
-

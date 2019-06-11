@@ -1,0 +1,49 @@
+/* components/table/index.wxss */
+.jox-table{
+  display: flex;
+  justify-content: center;
+  padding: 10rpx 0;
+
+}
+.table-y{
+  display: flex;
+  flex-direction: column;
+}
+.table-x{
+    display: flex;
+  flex-direction: row;
+}
+.table-xItem{
+  border: 1rpx solid #eeeeee;
+  border-radius: 5rpx;
+}
+.table-xItem text{
+  padding: 20rpx 15rpx;
+}
+.table-first{
+  font-weight: 600;
+  font-size: 28rpx;
+}
+.table-other{
+  font-size: 25rpx;
+
+}
+
+.table-center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.table-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.table-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}

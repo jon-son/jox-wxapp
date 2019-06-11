@@ -15,8 +15,8 @@ Component({
       value: []
     },
     selected : {
-      type : String,
-      value : "0"
+      type : Number,
+      value : 0
     },
     color : {
       type : String,
@@ -25,10 +25,6 @@ Component({
     hightlight: {
       type : String,
       value: "#409CFF"
-    },
-    fixed:{
-      type:Boolean,
-      value:false
     },
     type:{
       type:String,

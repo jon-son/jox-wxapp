@@ -1,6 +1,6 @@
 <!--components/tar/index.wxml-->
 <view class='jox-class'>
-  <view class='tar{{fixed?"-fixed":""}}'>
+  <view class='tar'>
     <view class='tar-item' wx:for="{{tarList}}" wx:key="index" data-id='{{index}}' bindtap='change_tar'>
       <view class='tar-item-text tar-item-text-{{type}}' 
       style='border-bottom: {{selected == index?"4rpx solid "+hightlight:"none"}} '>
@@ -10,5 +10,5 @@
       </view>
     </view>
   </view>
-  <view style='{{fixed?"height:87rpx":""}}'></view>
+  <slot name="tarItem"></slot>
 </view>

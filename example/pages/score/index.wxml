@@ -1,0 +1,13 @@
+<!--pages/score/index.wxml-->
+<view class='jox-title'>一、使用方法：</view>
+<view class='jox-content'>json文件引用</view>
+<jox-code codeType='html' codeData="{{jsonData}}" />
+<view class='jox-code'></view>
+<view class='jox-content'>wxml文件引用</view>
+<jox-code codeType='html' codeData="{{wxmlData}}" />
+<view class='jox-title'>二、属性介绍</view>
+
+<jox-table tableX="3" tableY="3" flex="center" tableData="{{tableData}}" />
+
+<view class='jox-title'>三、效果展示</view>
+<jox-score scoreData="{{scoreData}}"  />

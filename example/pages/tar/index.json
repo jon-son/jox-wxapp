@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "jox":"../../components/tar/index"
-  }
+    "jox-tar": "/components/tar/index",
+    "jox-code": "/components/code/index",
+    "jox-table": "/components/table/index"
+  },
+  "navigationBarTitleText": "tar上部导航栏"
 }

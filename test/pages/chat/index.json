@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "jox-chat": "/components/chat/index",
-    "jox-discolour": "/components/discolour-img/index"
-  }
-}

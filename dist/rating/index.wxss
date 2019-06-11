@@ -1,0 +1,14 @@
+/* components/rating/index.wxss */
+.starts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+}
+.icon-favorfill:before { content: "\e64b"; }
+.start{
+  color: #f4ea2a;
+}
+.startno{
+  color: #eaeaea;
+}

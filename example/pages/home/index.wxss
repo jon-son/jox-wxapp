@@ -1,4 +1,27 @@
 /* pages/home/index.wxss */
-.show-item{
+
+.show-box {
+  display: flex;
+  flex-direction: column;
+}
+.show-title{
+  padding: 15rpx 20rpx;
+  font-weight: 800;
+  font-size: 30rpx;
+}
+.show-item-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.show-item {
+  padding: 10rpx 0 10rpx 20rpx;
+  font-size: 25rpx;
+}
+
+.show-text {
   padding: 10rpx;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
 }

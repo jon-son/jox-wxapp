@@ -1,0 +1,26 @@
+<!--components/parts/comment/index.wxml-->
+<view class='jox-class'>
+  <view wx:for="{{listData}}" wx:key="index" class='comment' >
+    <view class='comment-top'>
+      <image bindtap='check_inf' id='{{item.user_id}}' class='comment-head-img' src='{{item.user_avatar}}'  />
+      <view class='comment-name-time'>
+        <text class='comment-name'>{{item.user_nickname}}</text>
+        <text class='comment-time'>{{item.time}}</text>
+      </view>
+      <rating jox-class="comment-rating" max="10" rating='{{item.grade*2}}' disabled="true" />
+    </view>
+    <view class='comment-center'>
+      <text class='comment-mesage'>{{item.assess_content}}</text>
+    </view>
+    <view class='comment-bottom'>
+      <view class='comment-imgs' wx:if="{{item.photos.length>0}}">
+        <image  mode='aspectFill'  class='comment-imgs-item' wx:for="{{item.photos}}"
+         wx:for-index="{{imgIndex}}"  wx:key="{{imgIndex}}" wx:for-item="imgItem" src='{{imgItem.url}}' data-img='{{imgItem.url}}' 
+         data-imgs="{{item.photos}}" bindtap='check_big_photo'></image>
+      </view>
+      <view class='comment-reply' wx:if="{{item.shop_assess_content!='' && item.shop_assess_content!=null}}">
+        <text class='comment-reply-text'>店家回复：{{item.shop_assess_content}}</text>
+      </view>
+    </view>
+  </view>
+</view>

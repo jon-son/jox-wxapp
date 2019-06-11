@@ -1,0 +1,3 @@
+<!--pages/rating/index.wxml-->
+<jox-rating  rating="8" bindchangerating='joxRatingTap' />
+<jox-rating  rating="8" disabled="{{true}}" />

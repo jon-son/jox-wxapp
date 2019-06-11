@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "jox-score": "/components/score/index",
+    "jox-code": "/components/code/index",
+    "jox-table": "/components/table/index"
+  },
+  "navigationBarTitleText": "积分面板"
+}

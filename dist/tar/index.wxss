@@ -2,7 +2,8 @@
 .tar{
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  background-color: #ffffff;
+  width: 100%;
 }
 .tar-item{
   -webkit-box-flex: 1;
@@ -17,8 +18,22 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.tar-item-text-normal{
   height: 88rpx;
   width: 200rpx;
   font-size: 28rpx;
   font-weight:400;
+}
+.tar-item-text-normal text{
+  height: 88rpx;
+}
+.tar-item-text-bigger{
+  height: 90rpx;
+  width: 200rpx;
+  font-size: 30rpx;
+  font-weight:bold;
+}
+.tar-item-text-bigger text{
+  height: 90rpx;
 }

@@ -1,2 +1,17 @@
 <!--pages/progress/index.wxml-->
-<jox-progress size="408" colorBg='rgba(255,255,255,0.61)' language="1" long="12" start="0" end="150" speed="1"></jox-progress>
+<view class='jox-title'>一、使用方法：</view>
+<view class='jox-content'>json文件引用</view>
+<jox-code codeType='html' codeData="{{jsonData}}" />
+<view class='jox-code'></view>
+<view class='jox-content'>wxml文件引用</view>
+<jox-code codeType='html' codeData="{{wxmlData}}" />
+<view class='jox-title'>二、属性介绍</view>
+
+<jox-table tableX="3" tableY="8" flex="center" tableData="{{tableData}}" />
+
+<view class='jox-title'>三、效果展示</view>
+<view class='show'>
+  <jox-progress size="408" colorBg='rgba(0,0,0,0.61)' language="0" long="12" start="{{start}}" end="{{end}}">
+    <image slot="logo" src='/pages/progress/jox_logo.png' class='logo'></image>
+  </jox-progress>
+</view>

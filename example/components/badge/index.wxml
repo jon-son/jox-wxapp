@@ -1,6 +1,0 @@
-<!--components/parts/badge/index.wxml-->
-<view class='jox-class'>
-  <view class='badge-box'>
-    <text class='badge'>{{num}}</text>
-  </view>
-</view>

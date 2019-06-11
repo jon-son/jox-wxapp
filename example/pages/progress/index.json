@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "jox-progress": "/components/progress/index"
-  }
+    "jox-progress": "/components/progress/index",
+    "jox-code": "/components/code/index",
+    "jox-table": "/components/table/index"
+  },
+  "navigationBarTitleText": "canvas表盘"
 }

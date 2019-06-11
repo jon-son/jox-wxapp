@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import "icon.wxss";
 .container {
   height: 100%;
   display: flex;
@@ -8,3 +9,12 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.jox-title{
+  font-size: 28rpx;
+  padding: 10rpx 20rpx;
+  font-weight: 600;
+}
+.jox-content{
+  font-size: 25rpx;
+  padding: 10rpx 25rpx;
+}

@@ -1,4 +1,12 @@
 /* pages/progress/index.wxss */
-page{
-  background-color: black;
+.show{
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 128rpx;
+  height: 62rpx;
+  opacity: 0.61;
 }

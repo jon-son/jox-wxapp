@@ -1,6 +1,15 @@
 <!--pages/home/index.wxml-->
-<view>
-  <view class='show-item' data-url="discolour-img" bindtap='jump_to'>可变色icon</view>
-  <view class='show-item' data-url="tar" bindtap='jump_to'>tar上部导航栏</view>
-  <view class='show-item' data-url="progress" bindtap='jump_to'>canvas表盘</view>
+<view class='show-box'>
+  <block wx:for="{{showData}}" wx:key="index">
+    <view class='show-title'>{{item.title}}</view>
+    <view class='show-item-box'>
+      <view class='show-item'  wx:for="{{item.list}}" wx:for-item="items" wx:key="items">
+        <view class='show-text' data-url="{{items.url}}" bindtap='jump_to'>
+          {{items.text}}
+        </view>
+      </view>
+    </view>
+
+  </block>
+
 </view>

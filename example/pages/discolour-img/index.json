@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "jox-discolour": "/components/discolour-img/index"
-  }
+    "jox-discolour": "/components/discolour-img/index",
+    "jox-code": "/components/code/index",
+    "jox-table": "/components/table/index"
+  },
+  "navigationBarTitleText": "png纯色图片换色"
 }

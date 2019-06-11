@@ -1,0 +1,30 @@
+/* components/code/index.wxss */
+.jox-codeBox{
+  width: 700rpx;
+  padding: 20rpx 0;
+  border: 1rpx solid #eeeeee;
+  border-radius: 10rpx;
+  margin:0 auto;
+}
+.code-vertical{
+  border-right: 1rpx solid black;
+  margin-right: 10rpx;
+}
+.code-line{
+  display: flex;
+  flex-direction: row;
+}
+.code-index{
+  width: 30rpx;
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  justify-content:flex-end;
+}
+.code-text{
+  width: 600rpx;
+  padding: 3rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,54 +1,38 @@
 //index.js
 //获取应用实例
-const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    jsonData: [{
+      text: "\"jox-discolour\": \"/components/discolour-img/index\"",
+      tab: 0
+    }],
+    wxmlData: [{
+      text: "<jox-discolour joxId=\"3\" src=\"/pages/discolour-img/test2.png\" rgb=\"(0, 0, 0)\" width=\"200\" height=\"200\"/>",
+      tab: 0
+    }],
+    tableData:[
+      [
+        "字段","参数","描述"
+      ],
+      [
+        "joxId", "默认值:joxCanvas", "canvasId,同页面多次调用时需要"
+      ],
+      [
+        "src", "无", "png本地图片资源，不可为网络图片资源 "
+      ],
+      [
+        "width", "默认值：200", "宽度，单位rpx。ps：建议宽度不低于图片的0.5倍"
+      ],
+      [
+        "heigth", "默认值：200", "高度，单位rpx。ps：建议高度不低于图片的0.5倍"
+      ],
+      [
+        "rgb", "默认值：(255,255,255)", "png要转换颜色的rgb(Red、Green、Blue)值"
+      ],
+    ]
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+  onLoad: function() {
+    console.log(this.data.jsonData[0].text)
   }
 })

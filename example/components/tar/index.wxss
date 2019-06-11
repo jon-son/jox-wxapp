@@ -5,15 +5,6 @@
   background-color: #ffffff;
   width: 100%;
 }
-.tar-fixed{
-  position:fixed;
-  display: flex;
-  flex-direction: row;
-  background-color: #ffffff;
-  width: 100%;
-  z-index: 1000;
-  margin-top: -1rpx;
-}
 .tar-item{
   -webkit-box-flex: 1;
   -webkit-flex: 1;

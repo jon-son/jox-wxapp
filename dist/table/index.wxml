@@ -1,0 +1,13 @@
+<!--components/table/index.wxml-->
+<view class='jox-table'>
+  <view class='table-y'>
+    <view class="table-yItem" wx:for="{{tableY}}" wx:key="yIndex" wx:for-index="yIndex">
+      <view class='table-x'>
+        <view class="table-xItem table-{{flex}}" wx:for="{{tableX}}" wx:for-item="xItem" wx:for-index="xIndex" wx:key="xItem" style='width:{{700/tableX}}rpx;'>
+          <text wx:if="{{yIndex==0}}" class='table-first'>{{tableData[yIndex][xIndex]}}</text>
+          <text wx:else class='table-other'>{{tableData[yIndex][xIndex]}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

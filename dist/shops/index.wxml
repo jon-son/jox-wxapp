@@ -1,0 +1,29 @@
+<view class='jox-class'>
+  <view class='nodata' wx:if="{{shopsList.length == 0}}">
+    <image class='nodata-img' src='/img/nodata.png'></image>
+  </view>
+  <scroll-view scroll-y="true" class='scroll'>
+    <view class='list' wx:for="{{shopsList}}" wx:key="index" data-lng="{{item.longitude}}" data-lat="{{item.latitude}}" data-id='{{item.id}}' bindtap='jump_to'>
+      <view class='list-item'>
+        <view class='head-img'>
+          <image src='{{item.shop_photo}}' />
+        </view>
+        <view class='inf'>
+          <view class='name'>
+            {{item.shop_name}}
+          </view>
+          <view class='score'>
+            <rating max="10" rating='{{item.grade}}' disabled="true" />
+            <text class='score-text'>{{item.grade/2}}分</text>
+            <view class='adrress-distance'>距离{{item.distancets}}</view>
+          </view>
+          <view class='address'>
+            <view class='adrress-inf'>
+              <image class='address-img' src='/img/addr.png' /> {{item.address}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
